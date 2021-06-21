@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/programa/public_html/
-    - /bin/rsync -av
+    - /bin/rsync -av public/ $DEPLOYPATH
