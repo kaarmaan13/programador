@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home5/programa/public_html/prueba/
-    - /bin/cp - R * $DEPLOYPATH
+    - /bin/cp - R php $DEPLOYPATH
