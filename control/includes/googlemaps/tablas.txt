@@ -1,0 +1,29 @@
+CREATE TABLE `grupopuntos` (
+`idgrupopuntos` int(5) NOT NULL auto_increment,
+`grupopuntos` varchar(40) NOT NULL default '0',
+`iconogrupo` varchar(40) NOT NULL default '0',
+`sombraiconogrupo` varchar(40) default '',
+PRIMARY KEY (`idgrupopuntos`)
+) TYPE=MyISAM AUTO_INCREMENT=1 ;
+
+CREATE TABLE `puntos` (
+`punto_ID` mediumint(6) NOT NULL auto_increment,
+`punto_long` varchar(30) NOT NULL default '0',
+`punto_lat` varchar(30) NOT NULL default '0',
+`punto_nombre` varchar(100) NOT NULL default '',
+`punto_direcc` text NOT NULL,
+`punto_coment` text NOT NULL,
+`punto_marcador` char(2) NOT NULL default '',
+`punto_tipo` int(5) NOT NULL default '0',
+`punto_url` varchar(100) NOT NULL default '',
+`punto_email` varchar(100) NOT NULL default '',
+`punto_logo` varchar(40) default '',
+`punto_fotomini` varchar(40) default '',
+`punto_foto` varchar(40) default '',
+`punto_ip` varchar(15) NOT NULL default '',
+`punto_month` smallint(2) NOT NULL default '0',
+`punto_day` smallint(2) NOT NULL default '0',
+`punto_year` smallint(2) NOT NULL default '0',
+`punto_time` varchar(15) NOT NULL default '',
+PRIMARY KEY (`punto_ID`)
+) TYPE=MyISAM AUTO_INCREMENT=1 ;

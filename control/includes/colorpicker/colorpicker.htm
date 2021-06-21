@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+
+<!-- YUI Dependencies -->  
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.1/build/utilities/utilities.js" ></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.1/build/slider/slider-min.js" ></script> 
+ 
+<!-- Color Picker source files for CSS and JavaScript --> 
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.1/build/colorpicker/assets/skins/sam/colorpicker.css"> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.1/build/colorpicker/colorpicker-min.js" ></script>
+
+<script type="text/javascript" src="windowfiles/dhtmlwindow.js"></script>
+<link rel="stylesheet" type="text/css" href="windowfiles/dhtmlwindow.css" />
+
+<script type="text/javascript" src="ddcolorpicker.js">
+
+/***********************************************
+* Color PIcker Widget (YUI Based)- By Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
+* Requires: YUI Color Picker and DHTML Window Widget
+***********************************************/
+
+</script>
+
+
+<style type="text/css">
+
+* html .yui-picker-bg{ /*Requires CSS. Do not edit/ remove*/
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://yui.yahooapis.com/2.5.1/build/colorpicker/assets/skins/sam/picker_mask.png',sizingMethod='scale');
+}
+
+/*Style used in demos below. Edit if desired*/
+
+.colorpreview{ /*CSS for sample Preview Control*/
+border: 1px solid black;
+padding: 1px 10px;
+cursor: hand;
+cursor: pointer;
+}
+
+form div{
+margin-bottom: 5px;
+}
+
+</style>
+
+</head>
+</body>
+
+<body>
+
+<form>
+
+<div style="height:27px">Rectangle control, preview on: <input type="text" id="field0" size="20" /> <span id="control0" class="colorpreview">&nbsp;</span></div>
+<div style="height:27px">Rectangle control, preview on: <input type="text" id="field1" size="20" /> <span id="control1" class="colorpreview">&nbsp;</span></div>
+<div style="height:27px">Rectangle control, preview on: <input type="text" id="field2" size="20" /> <span id="control2" class="colorpreview">&nbsp;</span></div>
+<div style="height:27px">Rectangle control, preview on: <input type="text" id="field3" size="20" /> <span id="control3" class="colorpreview">&nbsp;</span></div>
+<div style="height:27px">Rectangle control, preview on: <input type="text" id="field4" size="20" /> <span id="control4" class="colorpreview">&nbsp;</span></div>
+
+</form>
+
+<!--HTML for Color Picker. Should contain two unique IDs-->
+
+<div id="ddcolorwidget">
+Por favor, escoja un color:
+<div id="ddcolorpicker" style="position:relative; height:205px"></div>
+</div>
+
+
+<script type="text/javascript">
+
+ddcolorpicker.init({
+	colorcontainer: ['ddcolorwidget', 'ddcolorpicker'], //id of widget DIV, id of inner color picker DIV
+	displaymode: 'float', //'float' or 'inline'
+	floatattributes: ['DD Color Picker Widget', 'width=390px,height=250px,resize=1,scrolling=1,center=1'], //'float' window attributes
+	fields: ['field0:control0', 'field1:control1', 'field2:control2', 'field3:control3', 'field4:control4'] //[fieldAid[:optionalcontrolAid], fieldBid[:optionalcontrolBid], etc]
+})
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
