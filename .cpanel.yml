@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home5/programa/public_html/prueba/
-    - /bin/cp /php $DEPLOYPATH
+    - export DEPLOYPATH=/home5/programa/public_html/
+    - /bin/rsync -r * $DEPLOYPATH
