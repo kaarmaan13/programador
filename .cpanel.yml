@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home5/programa/public_html/
-    - /bin/cp /includes/superior.php $DEPLOYPATH
+    - /bin/cp -a * $DEPLOYPATH
