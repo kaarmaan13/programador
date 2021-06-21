@@ -1,0 +1,30 @@
+<Files xmlrpc.php>
+order allow,deny
+deny from all
+</Files>
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+</ifModule>
+<IfModule mod_expires.c>
+<filesmatch "\.(jpg|JPG|gif|GIF|png|PNG|css|ico|js|woff)$">
+ExpiresActive on
+ExpiresDefault "access plus 31 day"
+</filesmatch>
+</IfModule>
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=290304000, public"
+ExpiresDefault "access plus 1 year"
+</FilesMatch>
+<FilesMatch ".(js|css|html|htm|php|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+ExpiresByType text/php "access plus 1 day"
+Header unset ETag
+FileETag none
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Establecer el paquete “ea-php54” como el lenguaje de programación “PHP” predeterminado.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php54 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
